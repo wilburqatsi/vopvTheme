@@ -4,117 +4,308 @@ Author: William Chang
 Author URI https://www.wilburqatsi@github.io
 */
 
+/*START RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*END RESET*/
+
+
+h1 {
+	display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h3 {
+	display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h4 {
+	display: block;
+    font-size: 1em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h5 {
+	display: block;
+    font-size: .83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h6 {
+	display: block;
+    font-size: .67em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+
+
 body{
     font-family: 'Arial', sans-serif;
-    font-size: 14px;
+    font-size: 17px;
     color: #333;
+    /*width: 960px;*/
+    margin: 0 auto;
 }
 
 a:link,
 a:visited {
     color: #006ec3;
+	text-decoration: none;
 }
 
 p{
     line-height: 1.65em;
+	margin: 1em 0;
 }
 
-/* Navigation Menus */
-
-/*.site-nav{
-    
-}
-
-.site-nav ul{
-    margin: 0;
-    padding: 0;
-    color: green;
-}
-
-.site-nav ul:before, .site-nav ul:after{
-    content: "";
-    display: table;
-}
-
-.site-nav ul:after{clear:both;}
-
-.site-nav ul { *zoom: 1;}
-
-.site-nav ul li{
-    list-style: none;
-    float: left;
-}
-
-/*Site Header Menu */
-/*.site-header nav ul li a{
-    margin-right: 5px;
-}
-
-.site-header nav ul li a:link,
-.site-header nav ul li a:visited{
-    display: block;
-    padding: 10px 18px;
-    border: 1px solid #BBB;
-    text-decoration: none;
-}*/
-
-/*LATEST CHANGE*/
-
-.site-nav ul{
-    
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.site-nav li{
-    
-    float: left;
-}
-
-.site-nav a{
-    display: block;
-    text-decoration: none;
-    color: orange;
-    padding: 10px 18px;
-    
-    font-size: 150%;
-    
-}
-
-.site-nav a:hover{
-    background-color: black;
-    opacity: 0.5;
-    color: orange;
-}
-
-
-header div, header nav{
-    display: inline-block;
-    vertical-align: top;
-}
-
-.site-header h1 a{
-    text-decoration: none;
-    font-family: 'Arial', sans-serif;
-    color: orange;
-    font-size: 150%;
-}
-
-header{
+.site-header{
+    /*margin: 10px;*/
+    position: relative;
     background: url("images/PVBackground.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    background-position: center center;
     
-    height: 20vh;
-    border: 1px solid black;
-        
+    height: 150px;
+	 
+}
+
+
+.site-header h1{
+	margin-top: 0;
+}
+.site-header h1 a{
+    text-decoration: none;
+    
+    color: orange;
+    font-size: 200%;
+    
+}
+
+
+.site-nav{
+    position: absolute;
+    bottom: 0px;
+	
+/*	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%)*/
+	
+    right: 50px;
+/*    border: 1px solid black;
+*/    font-size: 25px;
+    background-color: rgba(0,0,0,0.5);
+	/*padding: 8px 0;*/
+}
+
+.site-nav ul li{
+    display: block;
+    float: left;
+    /*line-height: 30px;*/
+    /*height: 30px;*/
+    position: relative;
+	padding: 8px 0;
+
+}
+
+/*.site-nav ul ul li{
+	padding: 0;
+	
+}*/
+
+.site-nav li li{
+	
+	width: 100%;
+	
+}
+
+.site-nav li a{
+    display: block;
+    /*height: 40px;*/
+    /*line-height: 30px;*/
+    padding: 0px 20px;
+    color: orange;
+    text-decoration: none;
+	
+	/*text-align: right;*/
+  
+}
+
+.site-nav li:hover{
+    background-color: rgba(0,0,0,0.5);
+	
+}
+
+.site-nav .current-menu-item{
+	background-color: rgba(0,0,0,0.5);
+}
+
+.site-nav ul ul{
+    display: none;
+    position: absolute;
+    top: 40px;
+	
+	
+    /*border: 1px solid black;*/
+	background-color: rgba(0,0,0,0.5);
+	white-space: nowrap;
+	font-size: 20px;
+	z-index: 1;
+    
 }
 
 
 
 
+.site-nav ul li:hover > ul{
+    display: block;
+
+    
+}
+/*WEIRD STUFF*/
+
+.site-nav ul ul ul{
+    
+	right: 100%;
+	top: 0; 
+}
+
+
+/* Footer Navigation */
+
+.site-footer{
+	
+	padding-top: 20px;
+	color: black;
+	background: gainsboro;
+/*    height: 200px;
+*/	
+}
+
+.footer-nav{
+    
+    
+}
+
+.footer-nav ul{
+   
+	text-align: center;
+
+    
+}
+
+.footer-nav ul li{
+    
+    display: inline;
+}
+
+.footer-nav ul li a{
+   
+    text-decoration: none;
+    padding-right: 20px;
+    font-size: 20px
+}
+
+#copyright{
+	text-align: center;
+}
+
+#PVStar{
+	display: block;	
+	margin: 10px auto 10px auto;
+	
+	
+}
+
+ 
 /*General Layout */
 .container{
-   /* text-align: center;*/
+/*    text-align: center;
+*/
+}
+
+#body-content{
+	/*padding: 30px 5% 30px 5%;*/
+	width: 960px;
+	margin: 30px auto;
+	
 }

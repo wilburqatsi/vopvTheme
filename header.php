@@ -6,7 +6,7 @@
         <title><?php bloginfo('name'); ?></title>
         <?php wp_head(); ?>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet"> 
         
         
     </head>
@@ -18,7 +18,7 @@
         <header class="site-header">
             <div class="title-div">
                 <h1><a href= "<?php echo home_url(); ?>"><?php bloginfo("name"); ?></a></h1>
-                <h5><?php bloginfo("description"); ?></h5>
+                <h3><?php bloginfo("description"); ?></h3>
             </div>
             <?php
                 $args = array(

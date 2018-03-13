@@ -145,7 +145,11 @@ body{
 a:link,
 a:visited {
     color: #cc6600;
-	/*text-decoration: none;*/
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
 }
 
 p{
@@ -153,6 +157,7 @@ p{
 	margin: 1em 0;
 }
 
+/* WordPress Text Editor Alignment classes */
 img.alignright { float: right; margin: 0 0 1em 1em; }
 img.alignleft { float: left; margin: 0 1em 1em 0; }
 img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
@@ -178,13 +183,13 @@ ol {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    min-height: 175px;
+    /*min-height: 175px;*/
 	
 }
 
 
 .site-header h1{
-	margin-top: 0;
+	/*margin-top: 0;*/
 }
 .site-header h1 a{
     text-decoration: none;
@@ -197,21 +202,20 @@ ol {
 
 .site-header h3{
 	font-family: 'Over the Rainbow', cursive;
-    /*font-family: 'Shadows Into Light Two', cursive;*/
-	/*font-family: 'Kaushan Script', cursive;*/
+    
 	color: #cc6600;
 
 	padding-left: 80px;
 }
 
-.site-nav{
+/*.site-nav{
     position: absolute;
     bottom: 0px;
     right: 50px;
 	font-size: 25px;
     background-color: rgba(0,0,0,0.75);
 	border-radius: 25px 25px 0 0;
-	/*padding: 0 20px;*/
+	
 }
 
 .site-nav ul li{
@@ -273,7 +277,115 @@ ol {
     
 	right: 100%;
 	top: 0; 
+}*/
+
+/*.site-nav{
+    
+	font-size: 25px;
+    background-color: rgba(0,0,0,0.75);
+	border-radius: 25px 25px 0 0;
+	
+}*/
+
+.site-nav ul.menu{
+	float: right;
+	margin-right: 5%;
 }
+
+.site-nav{
+	background-color: rgba(0,0,0,0.75);
+	
+	/*height: 30px;*/
+}
+
+.site-nav a{
+	
+	color: #5abdac;
+	white-space: nowrap;
+	
+}
+
+.site-nav a:hover{
+	color: #cc6600;
+	text-decoration: none;
+	/*border-bottom: 3px solid #cc6600;*/
+}
+
+.site-nav ul.menu > li.menu-item-has-children > a:after{
+	font-size: 20px;
+	content:" ▾";
+}
+
+.site-nav ul > li:first-child{
+	border-radius: 25px 0 0 0;
+}
+
+.site-nav ul > li:last-child{
+	border-radius: 0 25px 0 0;
+}
+
+
+.site-nav li.current-menu-item > a{
+	color: #cc6600;
+}
+
+.site-nav ul.menu > li > a{
+	font-size: 30px;
+	
+}
+
+.site-nav ul.menu > li{
+	display: block;
+	float: left;
+
+	/*padding-right: 30px;*/
+	padding: 5px 15px;
+	position: relative;
+	background-color: rgba(0,0,0,0.8);
+}
+
+
+.site-nav ul.sub-menu {
+	display: none;
+	
+}
+
+.site-nav ul.menu > li > ul.sub-menu > li{
+	padding: 7px 15px;
+}
+
+.site-nav ul.sub-menu ul.sub-menu li{
+	padding-left: 30px;
+	
+	padding-top: 14px;
+}
+
+.site-nav ul.menu > li > ul.sub-menu > li > a{
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+
+/*.site-nav ul.sub-menu ul.sub-menu a{
+	font-style: italic;
+}*/
+
+.site-nav ul.menu > li > ul.sub-menu{
+	position: absolute; /* Main menu nav items won't resize on hover */
+	top: 40px; /*height of base ul + padding. Clears overlap between main-menu ul and sub-menu ul*/
+	background-color: rgba(0,0,0,0.75);
+	/*width: 150%;*/
+	/*right: 0;*/
+}
+
+
+
+
+.site-nav li:hover ul{
+    display: block;
+
+}
+
 
 
 /* Footer Navigation */

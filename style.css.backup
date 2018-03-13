@@ -116,20 +116,40 @@ h6 {
     font-weight: bold;
 }
 
+strong{
+	font-weight: bold;
+}
 
+em{
+	font-style: italic;
+}
+
+
+html{
+	position: relative;
+	/*min-height: 100%;*/
+}
 
 body{
     font-family: 'Arial', sans-serif;
     font-size: 17px;
     color: #333;
-    /*width: 960px;*/
-    margin: 0 auto;
+	/*background-color: #5abdac;*/
+	
+	
+	
+	/*margin-bottom: 290px;*/
 }
+
 
 a:link,
 a:visited {
-    color: #006ec3;
+    color: #cc6600;
 	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
 }
 
 p{
@@ -137,16 +157,33 @@ p{
 	margin: 1em 0;
 }
 
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
+/*HEADER */
+
 .site-header{
-    /*margin: 10px;*/
     position: relative;
     background: url("images/PVBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    
-    height: 150px;
-	 
+    min-height: 175px;
+	
 }
 
 
@@ -155,42 +192,39 @@ p{
 }
 .site-header h1 a{
     text-decoration: none;
-    
-    color: orange;
+    /*color: #5abdac;*/
+	color: #cc6600;
     font-size: 200%;
-    
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 20px;
 }
 
+.site-header h3{
+	font-family: 'Over the Rainbow', cursive;
+    /*font-family: 'Shadows Into Light Two', cursive;*/
+	/*font-family: 'Kaushan Script', cursive;*/
+	color: #cc6600;
+
+	padding-left: 80px;
+}
 
 .site-nav{
     position: absolute;
     bottom: 0px;
-	
-/*	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%)*/
-	
     right: 50px;
-/*    border: 1px solid black;
-*/    font-size: 25px;
-    background-color: rgba(0,0,0,0.5);
-	/*padding: 8px 0;*/
+	font-size: 25px;
+    background-color: rgba(0,0,0,0.75);
+	border-radius: 25px 25px 0 0;
+	/*padding: 0 20px;*/
 }
 
 .site-nav ul li{
     display: block;
     float: left;
-    /*line-height: 30px;*/
-    /*height: 30px;*/
     position: relative;
 	padding: 8px 0;
 
 }
-
-/*.site-nav ul ul li{
-	padding: 0;
-	
-}*/
 
 .site-nav li li{
 	
@@ -200,48 +234,44 @@ p{
 
 .site-nav li a{
     display: block;
-    /*height: 40px;*/
-    /*line-height: 30px;*/
     padding: 0px 20px;
-    color: orange;
+    color: #5abdac;
     text-decoration: none;
-	
-	/*text-align: right;*/
-  
+
 }
 
-.site-nav li:hover{
-    background-color: rgba(0,0,0,0.5);
+.site-nav ul > li:first-child{
+	border-radius: 25px 0 0 0;
+}
+
+.site-nav ul > li:last-child{
+	border-radius: 0 25px 0 0;
+}
+
+.site-nav a:hover{
+	color: #cc6600;
 	
 }
 
-.site-nav .current-menu-item{
-	background-color: rgba(0,0,0,0.5);
+.site-nav li.current-menu-item > a{
+	color: #cc6600;
 }
 
 .site-nav ul ul{
     display: none;
     position: absolute;
     top: 40px;
-	
-	
-    /*border: 1px solid black;*/
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.75);
 	white-space: nowrap;
 	font-size: 20px;
 	z-index: 1;
     
 }
 
-
-
-
 .site-nav ul li:hover > ul{
     display: block;
 
-    
 }
-/*WEIRD STUFF*/
 
 .site-nav ul ul ul{
     
@@ -252,25 +282,28 @@ p{
 
 /* Footer Navigation */
 
+
 .site-footer{
+	/*position: relative; Used for copyright position:absolute*/
 	
 	padding-top: 20px;
 	color: black;
 	background: gainsboro;
-/*    height: 200px;
-*/	
+	border-top: 2px solid #bfbfbf;
+	
+	flex-shrink: 0;
+	
+	background: url("images/PVSTAR.png") gainsboro no-repeat center center;
+	/*background-size: contain;*/
+	height: 220px;
+	
 }
 
-.footer-nav{
-    
-    
-}
 
 .footer-nav ul{
    
 	text-align: center;
 
-    
 }
 
 .footer-nav ul li{
@@ -285,27 +318,64 @@ p{
     font-size: 20px
 }
 
-#copyright{
+#copyright {
+	position: relative;
+	top: 75px;
 	text-align: center;
+	/*margin-bottom: 0;*/
 }
 
-#PVStar{
+.footer-widgets{
+	margin: 15px;
+	
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.footer-widget-area{
+	
+	width: 33%;
+	text-align: center;
+	
+	line-height: normal;
+	
+}
+
+/*.logo{
+	align-self: center;
+}*/
+
+/*#PVStar{
 	display: block;	
 	margin: 10px auto 10px auto;
 	
-	
-}
+}*/
 
  
 /*General Layout */
+
+
+#pageTitle{
+	font-size: 3em;
+	color: #cc6600;
+	/*border: 1px solid black;*/
+}
+
 .container{
-/*    text-align: center;
-*/
+	
+	
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
 
 #body-content{
-	/*padding: 30px 5% 30px 5%;*/
+	
 	width: 960px;
 	margin: 30px auto;
+	background-color: #ffffff;
+	
+	flex: 1 0 auto;
 	
 }

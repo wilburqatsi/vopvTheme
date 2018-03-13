@@ -17,7 +17,13 @@
             body{
                 font-family: "Lucida Console", monospace;
                 color: #bfbfbf;
-                background-color: #404040;
+                
+                background: url("<?php echo get_template_directory_uri();?>/images/PVTank.png") #404040
+                no-repeat center center;
+                background-size: cover;
+                background-attachment: fixed;
+                
+                
                 
             }
             
@@ -37,7 +43,7 @@
                 justify-content: center;
                 align-items: center;
                 
-                background: linear-gradient(#1a1a1a, #404040);
+                background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0));
             }
             
             #wcid-nav{
@@ -97,6 +103,11 @@
             a:visited {
                 color: #e6e6e6;
                 /*text-decoration: none;*/
+            }
+            
+            #wcid-body-content{
+                
+                /*background: red ;*/
             }
             
         </style>
